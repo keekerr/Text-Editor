@@ -10,19 +10,36 @@
 
 ## Description
 
-
+The purpose of this project was to edit a given set of code in order to produce a working text editing application that runs in the browser.
 
 
 ## Code Examples
 Example of Code 
 
 ```js
+export const putDb = async (content) => {
+  const db = await openDB('jate', 1);
+  const transaction = db.transaction('jate', 'readwrite');
+  const obStore = transaction.objectStore('jate');
+  const request = store.add({jate: content}); 
+  const result = await request;
 
+  console.log("successfully saved to databse", result);
+};
 ```
 Example of Code 
 
 ```js
-       
+   butInstall.addEventListener('click', async () => {
+    const event = window.deferredPrompt;
+    if (event) {
+        event.prompt();
+        window.deferredPrompt = null;
+        butInstall.classList.toggle('hidden', true);
+    } else {
+        return;
+    }
+});    
 ```
 
 ## Important Links
