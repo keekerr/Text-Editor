@@ -36,10 +36,7 @@ Example of Code
         event.prompt();
         window.deferredPrompt = null;
         butInstall.classList.toggle('hidden', true);
-    } else {
-        return;
-    }
-});    
+    
 ```
 
 ## Important Links
